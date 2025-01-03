@@ -7,6 +7,3 @@
 
 [push]
   autoSetupRemote = true
-
-#[datalad "dataset"]
-#  id = f9026e7b-8c71-4092-ba3a-72408294523c
