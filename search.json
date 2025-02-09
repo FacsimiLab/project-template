@@ -52,7 +52,7 @@
     "href": "notebook/about.html",
     "title": "About",
     "section": "",
-    "text": "Code\nfrom datetime import datetime\n\nnow = datetime.now()\nformatted_date = now.strftime(\"%m-%d-%Y at %I:%M %p\")\nprint(f\"This file was last updated on {formatted_date}\")\n\n\nThis file was last updated on 01-03-2025 at 07:26 AM",
+    "text": "Code\nfrom datetime import datetime\n\nnow = datetime.now()\nformatted_date = now.strftime(\"%m-%d-%Y at %I:%M %p\")\nprint(f\"This file was last updated on {formatted_date}\")\n\n\nThis file was last updated on 02-09-2025 at 06:42 AM",
     "crumbs": [
       "Home",
       "Notebook",
@@ -64,7 +64,7 @@
     "href": "index.html",
     "title": "[FacsimiLab] Project Template for Reproducible Research",
     "section": "",
-    "text": "This is a datalad repository for the FacsimiLab project. Additional dataset information to go here.\n\n\n\nDefault copyright\nAll research data in this repository, unless explicitly stated otherwise, is protected by copyright and does not include permissions for use or sharing from the author(s). This includes raw data, analysis / intermediate data, and research output data. Code, select source files, and specific research output may have other licenses. For more information, please consult the Licenses section.\nCopyright © 2024 Pranav Kumar Mishra\n\n This page was generated automatically from the repository readme.md on 2025-01-03 07:26:11.406958"
+    "text": "This is a datalad repository for the FacsimiLab project. Additional dataset information to go here.\n\n\n\nDefault copyright\nAll research data in this repository, unless explicitly stated otherwise, is protected by copyright and does not include permissions for use or sharing from the author(s). This includes raw data, analysis / intermediate data, and research output data. Code, select source files, and specific research output may have other licenses. For more information, please consult the Licenses section.\nCopyright © 2024 Pranav Kumar Mishra\n\n This page was generated automatically from the repository readme.md on 2025-02-09 06:42:45.732855"
   },
   {
     "objectID": "index.html#project-details",
@@ -78,7 +78,7 @@
     "href": "index.html#licensing",
     "title": "[FacsimiLab] Project Template for Reproducible Research",
     "section": "",
-    "text": "Default copyright\nAll research data in this repository, unless explicitly stated otherwise, is protected by copyright and does not include permissions for use or sharing from the author(s). This includes raw data, analysis / intermediate data, and research output data. Code, select source files, and specific research output may have other licenses. For more information, please consult the Licenses section.\nCopyright © 2024 Pranav Kumar Mishra\n\n This page was generated automatically from the repository readme.md on 2025-01-03 07:26:11.406958"
+    "text": "Default copyright\nAll research data in this repository, unless explicitly stated otherwise, is protected by copyright and does not include permissions for use or sharing from the author(s). This includes raw data, analysis / intermediate data, and research output data. Code, select source files, and specific research output may have other licenses. For more information, please consult the Licenses section.\nCopyright © 2024 Pranav Kumar Mishra\n\n This page was generated automatically from the repository readme.md on 2025-02-09 06:42:45.732855"
   },
   {
     "objectID": "licenses/MIT-license.html",
