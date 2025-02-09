@@ -1,10 +1,11 @@
 on:
   push:
     branches:
-      - main
+      - release
   pull_request:
     branches:
-      - main
+      - release
+      - rc
   workflow_dispatch:
 
 concurrency:
