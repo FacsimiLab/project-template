@@ -1,12 +1,9 @@
 [datalad "ui"]
   suppress-similar-results = off
-  progressbar=tqdm
 
 [datalad "save"]
   no-message=interactive
 
-[push]
-  autoSetupRemote = true
-
-#[datalad "dataset"]
-#  id = f9026e7b-8c71-4092-ba3a-72408294523c
+[datalad "runtime"]
+max-annex-jobs=10
+max-jobs=10
