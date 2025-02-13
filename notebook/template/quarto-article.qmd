@@ -2,7 +2,7 @@
 title: "Title"
 subtitle: "Subtitle"
 date: last-modified
-date-format: full
+date-format: medium
 author:
   - name:
       given: Pranav Kumar
@@ -15,14 +15,4 @@ author:
     email: pranav_k_mishra@rush.edu
     orcid: 0000-0001-5219-6269
     role: "Post Doctoral Research Fellow"
-format:
-  html:
-    code-fold: true
-    code-tools: true
-    tbl-cap-location: bottom
-execute: 
-  enabled: true
-  echo: false
-  output: asis #true
-  cache: true
 ---
