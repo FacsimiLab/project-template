@@ -1,9 +1,9 @@
 [datalad "ui"]
   suppress-similar-results = off
-  progressbar=tqdm
 
 [datalad "save"]
   no-message=interactive
 
-[push]
-  autoSetupRemote = true
+[datalad "runtime"]
+  max-annex-jobs=10
+  max-jobs=10
