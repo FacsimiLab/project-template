@@ -5,5 +5,5 @@
   no-message=interactive
 
 [datalad "runtime"]
-max-annex-jobs=10
-max-jobs=10
+  max-annex-jobs=10
+  max-jobs=10
