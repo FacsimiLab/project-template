@@ -5,49 +5,17 @@
 metadata/aggregate* annex.largefiles=nothing
 metadata/objects/** annex.largefiles=((largerthan=0))
 
-
-
-
-# Directories to exclude from git-annex
-#------------------------------------------------
-
-**/code annex.largefiles=nothing
-**/docs annex.largefiles=nothing
-
-# Filetypes to exclude from git-annex
-#------------------------------------------------
-
-# Code
-*.md annex.largefiles=nothing
-*.qmd annex.largefiles=nothing
-*.ipynb annex.largefiles=nothing
-
-*.yml annex.largefiles=nothing
-*.yaml annex.largefiles=nothing
-
-# Figures
-*.jpg annex.largefiles=nothing
-*.jpeg annex.largefiles=nothing
-*.png annex.largefiles=nothing
-*.heic annex.largefiles=nothing
-*.svg annex.largefiles=nothing
-
 # Include in git-annex
 #------------------------------------------------
 
-# Raw Data
-/data/raw/**/*.md annex.largefiles=nothing
-/data/raw/**/*.csv annex.largefiles=((largerthan=50MB))
-/data/raw annex.largefiles=((largerthan=0))
-
-# Analyzed Data
-/data/analysis/**/*.csv annex.largefiles=((largerthan=10MB))
-
-# Research Output Data
-/data/output annex.largefiles=((largerthan=10MB))
+* annex.largefiles=((mimeencoding=binary)and(largerthan=0))
+* annex.largefiles=((largerthan=100KB))
 
 # Data files types
 *.parquet annex.largefiles=((largerthan=0))
+*.h5 annex.largefiles=((largerthan=0))
+*.csv annex.largefiles=((largerthan=100KB))
+
 *.exe annex.largefiles=((largerthan=0))
 *.sav annex.largefiles=((largerthan=0))
 
@@ -60,5 +28,26 @@ metadata/objects/** annex.largefiles=((largerthan=0))
 *.pptx annex.largefiles=((largerthan=0))
 *.ppt annex.largefiles=((largerthan=0))
 
-# All other binary files
-* annex.largefiles=((mimeencoding=binary)and(largerthan=10MB))
+
+# Directories to exclude from git-annex
+#------------------------------------------------
+
+**/code annex.largefiles=nothing
+**/docs annex.largefiles=nothing
+**/documentation annex.largefiles=nothing
+**/logs annex.largefiles=nothing
+**/notebook/src annex.largefiles=nothing
+
+# Filetypes to exclude from git-annex
+#------------------------------------------------
+CHANGELOG.md
+README.md
+readme.md
+
+# Code / Documentation
+*.md annex.largefiles=nothing
+*.qmd annex.largefiles=nothing
+*.ipynb annex.largefiles=nothing
+
+*.yml annex.largefiles=nothing
+*.yaml annex.largefiles=nothing
