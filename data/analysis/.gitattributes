@@ -1,0 +1,5 @@
+# Git attributes for the intermediate / analyzed data directory
+
+# Include jupyter notebooks in git annex, without running nbstripout on them
+*.ipynb diff=ipynb
+*.ipynb annex.largefiles=((largerthan=100KB))

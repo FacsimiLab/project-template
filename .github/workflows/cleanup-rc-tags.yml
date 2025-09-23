@@ -1,0 +1,51 @@
+name: Cleanup Pre-Release Tags
+
+on:
+  push:
+    branches:
+      - release
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+  
+
+jobs:
+  delete-rc-tags:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v5
+        with:
+          fetch-depth: 0 # Ensure all tags are fetched
+
+      - name: List and delete pre-release tags
+        id: list_tags
+        run: |
+          echo "Searching for tags containing 'rc' or 'main'..."
+          TAGS=$(git tag -l "*-main*" "*-rc*")
+
+
+          if [ -n "$TAGS" ]; then
+            echo "Found tags:"
+            echo "$TAGS"
+
+            echo "Tags to delete:" >> $GITHUB_STEP_SUMMARY
+            echo "$TAGS" >> $GITHUB_STEP_SUMMARY
+
+            echo "$TAGS" | xargs -n 1 git tag -d
+
+            for TAG in $TAGS; do
+              git push origin --delete "$TAG" || echo "Failed to delete $TAG from remote."
+            done
+          else
+            echo "No tags to delete."
+            echo "No tags to delete." >> $GITHUB_STEP_SUMMARY
+          fi
+
+
+      - name: Success Message
+        run: |
+          echo "Completed deleting all tags containing 'rc'."

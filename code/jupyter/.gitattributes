@@ -1,0 +1,9 @@
+# git annex configuration for jupyter notebooks
+
+# Clear output of jupyter notebooks before commiting to git
+*.ipynb filter=nbstripout
+*.zpln filter=nbstripout
+*.ipynb diff=ipynb
+
+# Exclude from git-annex
+*.ipynb annex.largefiles=nothing
