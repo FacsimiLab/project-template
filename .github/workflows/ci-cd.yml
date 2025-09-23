@@ -30,7 +30,7 @@ jobs:
       # the branch was updated. To keep PSR working with the configured release branches,
       # we force a checkout of the desired release branch but at the workflow sha HEAD.
       - name: Setup | Checkout Repository at workflow sha
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           fetch-depth: 0
           ref: ${{ github.sha }}
@@ -41,7 +41,7 @@ jobs:
 
       - name: Python Semantic Release
         id: semvar
-        uses: pranavmishra90/semvar-docker
+        uses: pranavmishra90/semvar-docker@main
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           git_committer_email: "195262995+facsimilab-bot@users.noreply.github.com"
