@@ -46,7 +46,7 @@ jobs:
       - name: Python Semantic Release (Main Branch)
         id: semvar-tag-main-branch
         if: ${{ github.ref_name == 'main' }}
-        uses: pranavmishra90/semvar-docker@v0.2.0
+        uses: pranavmishra90/semvar-docker
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           git_committer_email: "195262995+facsimilab-bot@users.noreply.github.com"
@@ -63,7 +63,7 @@ jobs:
       - name: Python Semantic Release
         id: semvar-tag-rc
         if: ${{ github.ref_name != 'main' }}
-        uses: pranavmishra90/semvar-docker@v0.2.0
+        uses: pranavmishra90/semvar-docker
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           git_committer_email: "195262995+facsimilab-bot@users.noreply.github.com"
