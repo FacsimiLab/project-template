@@ -4,12 +4,6 @@ on:
   push:
     branches:
       - release
-  pull_request:
-    branches:
-      - release
-    types:
-      - opened
-      - ready_for_review
 
 permissions:
   id-token: write
@@ -38,6 +32,31 @@ jobs:
       - name: Setup | Force correct release branch on workflow SHA
         run: |
           git checkout -B ${{ github.ref_name }}
+
+      - name: List and delete pre-release tags
+        id: list_tags
+        run: |
+          echo "Searching for tags containing 'rc' or 'main'..."
+          TAGS=$(git tag -l "*-main*" "*-rc*" "*-beta*" "*-alpha*")
+
+
+          if [ -n "$TAGS" ]; then
+            echo "Found tags:"
+            echo "$TAGS"
+
+            echo "Tags to delete:" >> $GITHUB_STEP_SUMMARY
+            echo "$TAGS" >> $GITHUB_STEP_SUMMARY
+
+            echo "$TAGS" | xargs -n 1 git tag -d
+
+            for TAG in $TAGS; do
+              git push origin --delete "$TAG" || echo "Failed to delete $TAG from remote."
+            done
+          else
+            echo "No tags to delete."
+            echo "No tags to delete." >> $GITHUB_STEP_SUMMARY
+          fi
+
 
       - name: Python Semantic Release
         id: semvar

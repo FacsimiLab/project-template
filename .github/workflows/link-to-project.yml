@@ -1,4 +1,4 @@
-name: Add issues and PRs to BFGI GitHub Project 
+name: Add issues and PRs to the GitHub Project 
 
 on:
   issues:
@@ -13,9 +13,9 @@ jobs:
     name: Add issue and PR to project
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/add-to-project@v1.0.2
+      - uses: actions/add-to-project@main
         with:
           # You can target a project in a different organization
           # to the issue
-          project-url: https://github.com/orgs/FacsimiLab-Rush/projects/6
+          project-url: https://github.com/orgs/FacsimiLab/projects/1
           github-token: ${{ secrets.GH_PROJECT_PAT }}

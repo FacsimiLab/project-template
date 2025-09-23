@@ -17,31 +17,34 @@ jobs:
 
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v5
         with:
           fetch-depth: 0 # Ensure all tags are fetched
 
-      - name: List and Delete Tags Containing 'rc'
+      - name: List and delete pre-release tags
         id: list_tags
         run: |
-          echo "Searching for tags containing 'rc'..."
-          TAGS=$(git tag --list "*rc*")
-          echo "Found tags:"
-          echo "$TAGS"
-          if [ -z "$TAGS" ]; then
-            echo "No tags containing 'rc' found."
-            echo "tags_to_delete=" > tags.log
-          else
-            echo "tags_to_delete=$TAGS" > tags.log
+          echo "Searching for tags containing 'rc' or 'main'..."
+          TAGS=$(git tag -l "*-main*" "*-rc*")
 
-            echo "Deleting local tags..."
-            echo $TAGS | xargs -n 1 git tag -d
 
-            echo "Deleting remote tags..."
+          if [ -n "$TAGS" ]; then
+            echo "Found tags:"
+            echo "$TAGS"
+
+            echo "Tags to delete:" >> $GITHUB_STEP_SUMMARY
+            echo "$TAGS" >> $GITHUB_STEP_SUMMARY
+
+            echo "$TAGS" | xargs -n 1 git tag -d
+
             for TAG in $TAGS; do
-              git push origin --delete $TAG || echo "Failed to delete $TAG from remote."
+              git push origin --delete "$TAG" || echo "Failed to delete $TAG from remote."
             done
+          else
+            echo "No tags to delete."
+            echo "No tags to delete." >> $GITHUB_STEP_SUMMARY
           fi
+
 
       - name: Success Message
         run: |
