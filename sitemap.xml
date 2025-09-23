@@ -2,34 +2,38 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://FacsimiLab.github.io/project-template/docs/readme.html</loc>
-    <lastmod>2025-09-23T16:25:16.981Z</lastmod>
+    <lastmod>2025-09-23T16:36:23.186Z</lastmod>
   </url>
   <url>
     <loc>https://FacsimiLab.github.io/project-template/licenses/cc-by-sa-4.0.html</loc>
-    <lastmod>2025-09-23T16:25:16.981Z</lastmod>
+    <lastmod>2025-09-23T16:36:23.186Z</lastmod>
   </url>
   <url>
     <loc>https://FacsimiLab.github.io/project-template/licenses/FacsimiLab-Project-Template-Repository.html</loc>
-    <lastmod>2025-09-23T16:25:16.981Z</lastmod>
-  </url>
-  <url>
-    <loc>https://FacsimiLab.github.io/project-template/notebook/about.html</loc>
-    <lastmod>2025-09-23T16:25:16.981Z</lastmod>
-  </url>
-  <url>
-    <loc>https://FacsimiLab.github.io/project-template/index.html</loc>
-    <lastmod>2025-09-23T16:25:16.981Z</lastmod>
+    <lastmod>2025-09-23T16:36:23.186Z</lastmod>
   </url>
   <url>
     <loc>https://FacsimiLab.github.io/project-template/notebook/template/quarto-article.html</loc>
-    <lastmod>2025-09-23T16:25:16.982Z</lastmod>
+    <lastmod>2025-09-23T16:36:23.187Z</lastmod>
+  </url>
+  <url>
+    <loc>https://FacsimiLab.github.io/project-template/index.html</loc>
+    <lastmod>2025-09-23T16:36:23.186Z</lastmod>
+  </url>
+  <url>
+    <loc>https://FacsimiLab.github.io/project-template/notebook/about.html</loc>
+    <lastmod>2025-09-23T16:36:23.187Z</lastmod>
+  </url>
+  <url>
+    <loc>https://FacsimiLab.github.io/project-template/CHANGELOG.html</loc>
+    <lastmod>2025-09-23T16:36:23.185Z</lastmod>
   </url>
   <url>
     <loc>https://FacsimiLab.github.io/project-template/licenses/MIT-license.html</loc>
-    <lastmod>2025-09-23T16:25:16.981Z</lastmod>
+    <lastmod>2025-09-23T16:36:23.186Z</lastmod>
   </url>
   <url>
     <loc>https://FacsimiLab.github.io/project-template/licenses/citationstyles.html</loc>
-    <lastmod>2025-09-23T16:25:16.981Z</lastmod>
+    <lastmod>2025-09-23T16:36:23.186Z</lastmod>
   </url>
 </urlset>
